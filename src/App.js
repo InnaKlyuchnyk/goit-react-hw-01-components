@@ -1,5 +1,8 @@
-import Profile from "./components/Profile";
+import Profile from "./components/Profile/Profile";
+import Section from "./components/Section/Section";
+import StatList from "./components/StatList/StatList";
 import user from "./user.json";
+import data from "./data.json";
 
 export default function App() {
   return (
@@ -11,6 +14,10 @@ export default function App() {
         location={user.location}
         stats={user.stats}
       />
+
+      <Section title={data.title}>
+        <StatList items={data} />
+      </Section>
     </div>
   );
 }
